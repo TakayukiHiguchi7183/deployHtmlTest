@@ -1,0 +1,19 @@
+name: Deploy_To_Azure_ActionSample
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy-to-azure:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+    - name: Deploy to Azure WebApps
+      uses: azure/webapps-deploy@v2
+      with:
+        app-name: "AzureDeployTest001"
+        publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
+        package: .
