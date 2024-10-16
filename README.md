@@ -6,8 +6,7 @@
 * 言語：htmlファイル。今後拡張予定
 * 環境へのアクセス
   * 開発環境　[URL](https://delightful-bay-0ed4f1700.5.azurestaticapps.net/)
-  * 本番staging環境　[URL](https://azuredeploytest001-staging.azurewebsites.net/)
-  * 本番product環境　[URL](https://azuredeploytest001.azurewebsites.net/)
+  * 本番環境　[URL](https://azuredeploytest001.azurewebsites.net/)
 
 ## インストール方法（installation）
 
@@ -44,10 +43,8 @@
 ・Actionsによるステージングへの自動実行を行い、Azureコンソール上でproduct環境へスワップします
 
 1. develop環境へデプロイすると、devDeployフローにより開発環境（[URL](https://delightful-bay-0ed4f1700.5.azurestaticapps.net/)）にデプロイ
-3. 動作確認し、本番移送しても問題なければdevelopブランチをmainブランチにマージ（プルリクエスト）
-4. マージすると、deployフローにより本番staging環境（[URL](https://azuredeploytest001-staging.azurewebsites.net/)）にデプロイ
-5. 動作確認し、問題なければAzureコンソールよりスワップ
-6. 本番product環境で稼働（[URL](https://azuredeploytest001.azurewebsites.net/)）
+2. 動作確認し、本番移送しても問題なければdevelopブランチをmainブランチにマージ（プルリクエスト）
+3. deployフローで本番環境（[URL](https://azuredeploytest001.azurewebsites.net/)）にデプロイ
 
 ## 利用ライセンス
 
